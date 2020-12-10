@@ -22,9 +22,14 @@ cd grpc
 git submodule update --init # 获取gRPC的依赖组件
 mkdir build_grpc
 cd build_grpc
-cmake ..
-msbuild.exe -p:configuration=Release -p:platform=x64 -p:PreferredToolArchitecture=x64 -p:OutDir=./output/ -t:rebuild grpc_cpp_plugin.vcxproj
-cp -r ./output/grpc_cpp_plugin.exe $GOPATH/bin
+cmake -DCMAKE_INSTALL_PREFIX:PATH=./output/grpc .. #代码生成目录
+cmake --build . --config Debug
+cmake --build . --config Release
+msbuild.exe -p:configuration=Debug -p:platform=x64 -p:PreferredToolArchitecture=x64 -t:build INSTALL.vcxproj
+#msbuild.exe -p:configuration=Release -p:platform=x64 -p:PreferredToolArchitecture=x64 -t:build INSTALL.vcxproj
+cp -r ./Release/grpc_cpp_plugin.exe $GOPATH/bin
+
+../../open.bat output
 
 # chmod +x $GOPATH/bin/protoc 
 
