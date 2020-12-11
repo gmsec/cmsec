@@ -8,51 +8,13 @@ import (
 
 	proto "client/rpc/example"
 
-	"client/internal/routers"
-	"client/internal/service/hello"
-
-	"github.com/gin-gonic/gin"
-	"github.com/gmsec/goplugins/plugin"
 	"github.com/gmsec/micro"
-	"github.com/xxjwxc/public/mydoc/myswagger"
 	"github.com/xxjwxc/public/mylog"
 )
 
 // StartServer service call backe
 func StartServer() {
-	// swagger
-	myswagger.SetHost("https://localhost:8080")
-	myswagger.SetBasePath("client")
-	myswagger.SetSchemes(true, false)
-	// -----end --
-
-	// reg := registry.NewDNSNamingRegistry()
-	// grpc 相关 初始化服务
-	service := micro.NewService(
-		micro.WithName("client.srv.eg1"),
-		// micro.WithRegisterTTL(time.Second*30),      //指定服务注册时间
-		micro.WithRegisterInterval(time.Second*15), //让服务在指定时间内重新注册
-		// micro.WithRegistryNaming(reg),
-	)
-	h := new(hello.Hello)
-	proto.RegisterHelloServer(service.Server(), h) // 服务注册
-	// ----------- end
-
-	// gin restful 相关
-	router := gin.Default()
-	router.Use(routers.Cors())
-	v1 := router.Group("/client/api/v1")
-	routers.OnInitRouter(v1, h) // 自定义初始化
-	// ------ end
-
-	plg, b := plugin.Run(plugin.WithMicro(service),
-		plugin.WithGin(router),
-		plugin.WithAddr(":82"))
-
-	if b == nil {
-		plg.Wait()
-	}
-	fmt.Println("done")
+	// more // https://github.com/gmsec/gmsec
 }
 
 // StartClient 启动client 用户端
