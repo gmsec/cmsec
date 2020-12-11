@@ -1,17 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="src">
+      <UniqueIdentifier>{bc0c09e3-4c9a-4469-8b17-cedcadc2ace1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{95a4a01b-b55c-4455-ae1c-8ac089de3a98}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="src\tools\mylog">
+      <UniqueIdentifier>{3f3dd1db-0d62-4344-9cd2-a9be7b9afc62}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\tools\mygrpc">
+      <UniqueIdentifier>{a0370b8c-4bdc-4de7-ab1b-66ed82d46b55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal">
+      <UniqueIdentifier>{5b1c8f0a-69fd-4ac6-93d6-4acda6da612e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\service">
+      <UniqueIdentifier>{762dbb59-42c6-4ff3-b754-092f2f8d76c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\service\hello">
+      <UniqueIdentifier>{7a6e49ce-0397-4f2e-8f51-ee0831d6a10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc">
+      <UniqueIdentifier>{a5dbed06-0be2-43be-8973-a4c498fbfa00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc\common">
+      <UniqueIdentifier>{65088969-bf18-4cc9-9d29-716e1990fae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc\example">
+      <UniqueIdentifier>{67d748a8-5142-4cfa-ab6d-546e832fbce8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cmsec\src\tools\tools.cpp">
+      <Filter>src\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\src\tools\mylog\mylog.cpp">
+      <Filter>src\tools\mylog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\src\tools\mygrpc\server.cpp">
+      <Filter>src\tools\mygrpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\main.cpp" />
+    <ClCompile Include="..\cmsec\src\internal\service\hello\hello.cpp">
+      <Filter>src\internal\service\hello</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\common\common_public.grpc.pb.cc">
+      <Filter>rpc\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\common\common_public.pb.cc">
+      <Filter>rpc\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\example\hello.grpc.pb.cc">
+      <Filter>rpc\example</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\example\hello.pb.cc">
+      <Filter>rpc\example</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cmsec\src\tools\tools.h">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\tools\mylog\mylog.h">
+      <Filter>src\tools\mylog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\tools\mygrpc\server.h">
+      <Filter>src\tools\mygrpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\internal\service\hello\hello.h">
+      <Filter>src\internal\service\hello</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\common\common_public.grpc.pb.h">
+      <Filter>rpc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\common\common_public.pb.h">
+      <Filter>rpc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\example\hello.grpc.pb.h">
+      <Filter>rpc\example</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\example\hello.pb.h">
+      <Filter>rpc\example</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

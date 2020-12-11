@@ -1,0 +1,13 @@
+base:
+    is_dev : true
+    serial_number : 1.0.0
+    service_name : client
+    service_displayname : clientserver
+    sercice_desc : client微服务
+mysql_info:
+    host : localhost
+    port : 3306
+    username : root
+    password : 123456
+    database : oauth_db
+
