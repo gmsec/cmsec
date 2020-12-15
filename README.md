@@ -20,4 +20,17 @@ need list (cmake,make,msbuild,git)
 - shell execute [proto_install_windows_git_bash](proto_install_windows_git_bash.sh)
 - done file in (output/grpc)
 
+# linux install
+
+```
+sudo apt-get install build-essential autoconf libtool pkg-config
+sudo apt-get install cmake
+sudo apt-get install clang-5.0 libc++-dev
+```
+```
+sudo ./proto_install_linux_cmake.sh
+```
+- done
+
+
 more : https://github.com/grpc/grpc/blob/master/BUILDING.md

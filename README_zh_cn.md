@@ -1,8 +1,6 @@
 # cmsec
 cpp micro service. c++ 微服务
 
-## [English](README.md)
-
 [cmsec](https://github.com/gmsec/cmsec)
 
 
@@ -19,11 +17,30 @@ cpp micro service. c++ 微服务
 - install [cmake](https://cmake.org/)
 - install [git](https://git-scm.com/)
 - install [mingw64](http://www.mingw.org/)
-- git shell execute [proto_install_windows_git_bash](proto_install_windows_git_bash.sh)
-- done file in (output/grpc)
+- git shell execute [proto_install_windows_git_bash.sh]([proto_install_windows_git_bash.sh](https://github.com/gmsec/cmsec/blob/master/proto_install_windows_git_bash.sh))
+- 完成 生成目录在 (grpc/build_grpc/output/grpc)
 
-# 生成包下载地址
+# linux install
+
+```
+sudo apt-get install build-essential autoconf libtool pkg-config
+sudo apt-get install cmake
+sudo apt-get install clang-5.0 libc++-dev
+```
+
+[proto_install_linux_cmake.sh](https://github.com/gmsec/cmsec/blob/master/proto_install_linux_cmake.sh))
+```
+sudo ./proto_install_linux_cmake.sh
+```
+- 完成 生成目录在 (grpc/build_grpc/output/grpc)
+
+
+# windows 生成包下载地址
 
 [grpc_vs_2019](https://download.csdn.net/download/xie1xiao1jun/13646650)
 
-更多 : https://github.com/grpc/grpc/blob/master/BUILDING.md
+更多 : 
+
+[gmsec/cmsec](https://github.com/gmsec/cmsec)
+
+https://github.com/grpc/grpc/blob/master/BUILDING.md
