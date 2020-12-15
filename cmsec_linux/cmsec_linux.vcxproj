@@ -30,12 +30,40 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="Shared" />
-  <ImportGroup Label="PropertySheets" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\props\tools_linuxD.props" />
+    <Import Project="..\props\grpc_linuxD.props" />
+    <Import Project="..\cmsec\props\example_linuxD.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\props\tools_linux.props" />
+    <Import Project="..\props\grpc_linux.props" />
+    <Import Project="..\cmsec\props\example_linux.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\cmsec\main.cpp" />
+    <ClCompile Include="..\cmsec\rpc\common\common_public.grpc.pb.cc" />
+    <ClCompile Include="..\cmsec\rpc\common\common_public.pb.cc" />
+    <ClCompile Include="..\cmsec\rpc\example\hello.grpc.pb.cc" />
+    <ClCompile Include="..\cmsec\rpc\example\hello.pb.cc" />
+    <ClCompile Include="..\cmsec\src\internal\service\hello\hello.cpp" />
+    <ClCompile Include="..\cmsec\src\tools\mygrpc\server.cpp" />
+    <ClCompile Include="..\cmsec\src\tools\mylog\mylog.cpp" />
+    <ClCompile Include="..\cmsec\src\tools\tools.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\cmsec\rpc\common\common_public.grpc.pb.h" />
+    <ClInclude Include="..\cmsec\rpc\common\common_public.pb.h" />
+    <ClInclude Include="..\cmsec\rpc\example\hello.grpc.pb.h" />
+    <ClInclude Include="..\cmsec\rpc\example\hello.pb.h" />
+    <ClInclude Include="..\cmsec\src\internal\service\hello\hello.h" />
+    <ClInclude Include="..\cmsec\src\tools\mygrpc\server.h" />
+    <ClInclude Include="..\cmsec\src\tools\mylog\mylog.h" />
+    <ClInclude Include="..\cmsec\src\tools\tools.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\cmsec\CMakeLists.txt" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -9,7 +9,8 @@ cd grpc
 git submodule update --init # 获取gRPC的依赖组件
 mkdir -p build_grpc
 cd build_grpc
-cmake -DCMAKE_INSTALL_PREFIX:PATH=./output/grpc ..  #代码生成目录
+# cmake -DCMAKE_INSTALL_PREFIX:PATH=./output/grpc -DgRPC_BUILD_TESTS=OFF -DBUILD_SHARED_LIBS=ON -DgRPC_INSTALL=ON ..  #代码生成目录 so
+cmake -DCMAKE_INSTALL_PREFIX:PATH=./output/grpc -DgRPC_BUILD_TESTS=OFF -DBUILD_SHARED_LIBS=ON ..  #代码生成目录 lib
 make
 sudo make install
 cp -rf ./output/grpc/bin/grpc_cpp_plugin $GOPATH/bin

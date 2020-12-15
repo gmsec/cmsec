@@ -1,6 +1,9 @@
 #ifndef _GRPC_SERVER_H_
 #define _GRPC_SERVER_H_
 
+#define GPR_LINUX_LOG 1
+
+
 #include <grpcpp/grpcpp.h>
 
 class GrpcServer final {

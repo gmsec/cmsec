@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="rpc">
+      <UniqueIdentifier>{309a2572-1df3-4907-ae77-8e0145dc7f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc\common">
+      <UniqueIdentifier>{79f21f7f-0549-4e96-9297-7ace6bc98bcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rpc\example">
+      <UniqueIdentifier>{8e91a4ef-8abb-4436-802a-b111b4707dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{d37c51fe-ddc6-4bdc-b380-d7ff5f1ffdf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools">
+      <UniqueIdentifier>{4349c25f-c512-47aa-a1a1-e7fe29277178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools\mygrpc">
+      <UniqueIdentifier>{1c52238b-82c1-4065-a4e7-4f2751648ace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal">
+      <UniqueIdentifier>{2bd4a1bb-3e1f-41c2-9911-ef1f2d9ea2d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\service">
+      <UniqueIdentifier>{28e4f1a2-d80f-4d85-bc8f-f5f077f1aef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\internal\service\hello">
+      <UniqueIdentifier>{fc64cd2e-d749-4be2-a356-83155cefda0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tools\mylog">
+      <UniqueIdentifier>{06bf8816-3ae7-47f9-abeb-b87430d157e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cmsec\rpc\common\common_public.grpc.pb.cc">
+      <Filter>rpc\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\common\common_public.pb.cc">
+      <Filter>rpc\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\example\hello.grpc.pb.cc">
+      <Filter>rpc\example</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\rpc\example\hello.pb.cc">
+      <Filter>rpc\example</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\src\tools\mygrpc\server.cpp">
+      <Filter>src\tools\mygrpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\src\internal\service\hello\hello.cpp">
+      <Filter>src\internal\service\hello</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\main.cpp" />
+    <ClCompile Include="..\cmsec\src\tools\mylog\mylog.cpp">
+      <Filter>src\tools\mylog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cmsec\src\tools\tools.cpp">
+      <Filter>src\tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cmsec\rpc\common\common_public.grpc.pb.h">
+      <Filter>rpc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\common\common_public.pb.h">
+      <Filter>rpc\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\example\hello.grpc.pb.h">
+      <Filter>rpc\example</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\rpc\example\hello.pb.h">
+      <Filter>rpc\example</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\tools\mygrpc\server.h">
+      <Filter>src\tools\mygrpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\internal\service\hello\hello.h">
+      <Filter>src\internal\service\hello</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\tools\mylog\mylog.h">
+      <Filter>src\tools\mylog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cmsec\src\tools\tools.h">
+      <Filter>src\tools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\cmsec\CMakeLists.txt" />
+  </ItemGroup>
+</Project>

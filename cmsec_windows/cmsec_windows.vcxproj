@@ -40,13 +40,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\props\tools_windowsD.props" />
     <Import Project="..\props\grpc_windowsD.props" />
-    <Import Project="..\cmsec\props\exampleD.props" />
+    <Import Project="..\cmsec\props\example_windowsD.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\props\tools_windows.props" />
     <Import Project="..\props\grpc_windows.props" />
-    <Import Project="..\cmsec\props\example.props" />
+    <Import Project="..\cmsec\props\example_windows.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

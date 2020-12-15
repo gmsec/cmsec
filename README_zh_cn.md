@@ -35,6 +35,60 @@ sudo ./proto_install_linux_cmake.sh
 - 完成 生成目录在 (grpc/build_grpc/output/grpc)
 
 
+- 注意链接顺序
+  
+```
+grpc++
+grpc++_reflection
+grpc++_unsecure
+grpc++_alts
+grpc++_error_details
+grpc
+grpc_unsecure
+grpc_plugin_support
+grpcpp_channelz
+gpr
+absl_synchronization
+absl_symbolize
+absl_stacktrace
+absl_debugging_internal
+absl_base
+absl_strings
+absl_strings_internal
+absl_time
+absl_time_zone
+absl_exponential_biased
+absl_spinlock_wait
+absl_log_severity
+absl_raw_logging_internal
+absl_throw_delegate
+absl_malloc_internal
+absl_bad_optional_access
+absl_civil_time
+absl_int128
+absl_demangle_internal
+absl_graphcycles_internal
+absl_hashtablez_sampler
+absl_city
+absl_raw_hash_set
+absl_str_format_internal
+absl_cord
+absl_status
+absl_bad_variant_access
+absl_hash
+absl_statusor
+pthread
+ssl
+z
+address_sorting
+upb
+cares
+re2
+crypto
+protobuf
+protoc
+```
+
 # windows 生成包下载地址
 
 [grpc_vs_2019](https://download.csdn.net/download/xie1xiao1jun/13646650)
